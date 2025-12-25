@@ -1,15 +1,11 @@
-package com.learning.SpringBoot;
-
-
-import org.springframework.beans.factory.annotation.Autowired;
+import com.learning.SpringBoot.Basics.PaymentService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 //@EnableAutoConfiguration   this annotation helps to convert the spring project to springboot project
-public class Application implements CommandLineRunner {
+public class Application{ // implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
@@ -18,22 +14,22 @@ public class Application implements CommandLineRunner {
 
     //1. field injection
     //@Autowired
-    private final PaymentService paymentService;
-
-    // 2. constructor injection, this one is better because you are explicitly specifying that this class is dependent on this this particular things.
-    // tou can declare it as final if constructor injection used.
-    public Application(PaymentService paymentService) {
-        this.paymentService = paymentService;
-    }
-
-    // These all IOC, autowired, bean helps us in loose coupling
-
-
-    @Override
-    public void run(String... args) {
-        String payment = paymentService.pay();
-        System.out.printf("Payment done: "+payment);
-    }
+//    private final PaymentService paymentService;
+//
+//    // 2. constructor injection, this one is better because you are explicitly specifying that this class is dependent on this this particular things.
+//    // tou can declare it as final if constructor injection used.
+//    public Application(PaymentService paymentService) {
+//        this.paymentService = paymentService;
+//    }
+//
+//    // These all IOC, autowired, bean helps us in loose coupling
+//
+//
+//    @Override
+//    public void run(String... args) {
+//        String payment = paymentService.pay();
+//        System.out.printf("Payment done: "+payment);
+//    }
 }
 
 //What happens when you start the springboot application:

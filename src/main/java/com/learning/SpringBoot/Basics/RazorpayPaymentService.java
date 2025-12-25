@@ -1,7 +1,6 @@
-package com.learning.SpringBoot;
+package com.learning.SpringBoot.Basics;
 
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperties;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package com.learning.SpringBoot;
+package com.learning.SpringBoot.Basics;
 
 public interface PaymentService {
     String pay();
